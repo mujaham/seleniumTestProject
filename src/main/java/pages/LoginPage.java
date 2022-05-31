@@ -1,6 +1,7 @@
 package pages;
 
 import base.BaseTest;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.RemoteWebElement;
 import org.openqa.selenium.support.FindBy;
@@ -10,7 +11,7 @@ import org.testng.annotations.Test;
 
 public class LoginPage extends BaseTest {
 
-    @FindBy(name="user-name")
+    @FindBy(xpath="//input[@id='user-name']")
     WebElement username;
 
     @FindBy(xpath = "//input[@id='password']")
@@ -27,12 +28,14 @@ public class LoginPage extends BaseTest {
     }
 
 
-@Test
-    public void validLogin() throws InterruptedException {
+
+    public void validLogin(String un, String pwd) throws InterruptedException {
+
     Thread.sleep(3000);
-    username.click();
-    driver.get(prop.getProperty("username"));
-    password.click();
-    driver.get(prop.getProperty("password"));
+     username.click();
+     username.sendKeys(un);
+     password.click();
+     password.sendKeys(pwd);
+
     }
     }
