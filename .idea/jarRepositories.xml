@@ -21,5 +21,10 @@
       <option name="name" value="JBoss Community repository" />
       <option name="url" value="https://repository.jboss.org/nexus/content/repositories/public/" />
     </remote-repository>
+    <remote-repository>
+      <option name="id" value="internal-artifactory" />
+      <option name="name" value="VD Internal Repo" />
+      <option name="url" value="http://52.86.153.55:8081/artifactory/vend-libs-local/qa" />
+    </remote-repository>
   </component>
 </project>
